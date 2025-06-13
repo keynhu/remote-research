@@ -3,11 +3,12 @@ import json
 import os
 from typing import List
 from mcp.server.fastmcp import FastMCP
+from mcp.auth import NoAuth
 
 PAPER_DIR = "papers"
 
 # Initialize FastMCP server
-mcp = FastMCP("research", port=8001)
+mcp = FastMCP("research", port=8001, auth=NoAuth())
 
 @mcp.tool()
 def search_papers(topic: str, max_results: int = 5) -> List[str]:
