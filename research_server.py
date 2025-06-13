@@ -3,7 +3,7 @@ import json
 import os
 from typing import List
 from mcp.server.fastmcp import FastMCP
-from mcp.auth import NoAuth
+from mcp.server.auth import NoAuth
 
 PAPER_DIR = "papers"
 
