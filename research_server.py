@@ -3,12 +3,11 @@ import json
 import os
 from typing import List
 from mcp.server.fastmcp import FastMCP
-from mcp.server.fastapi import FastAPIServer
 
 PAPER_DIR = "papers"
 
 # Initialize FastMCP server
-mcp = FastMCP("research", port=8001, auth_server_provider=FastAPIServer(auth_provider=None))
+mcp = FastMCP("research", port=8001)
 
 @mcp.tool()
 def search_papers(topic: str, max_results: int = 5) -> List[str]:
